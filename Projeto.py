@@ -1,3 +1,16 @@
+"""
+
+Integrantes do Grupo:
+- Breno Gustavo dos Santos - RM: 557509
+- Allan Baeza - RM: 556771
+- Livia Oliveira - RM: 556281
+
+Descrição:
+Este projeto foi desenvolvido como parte da Sprint 4. 
+Ele consiste em um sistema de CRUD para gerenciar serviços de manutenção de veículos,
+com integração a banco de dados, exportação em JSON e consumo de uma API externa.
+"""
+
 import cx_Oracle
 import json
 import requests  # Para consumir uma API externa
@@ -67,7 +80,7 @@ def exportar_dados_json():
         json.dump(dados, file, indent=4)
     print("Dados exportados para servicos.json")
 
-# Consome API externa
+# Consome API externa para conversão de USD para BRL
 def obter_taxa_cambio():
     try:
         response = requests.get("https://api.exchangerate-api.com/v4/latest/BRL")
